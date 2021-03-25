@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mascon">
         <activity android:name=".Register"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Login"
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
