@@ -8,9 +8,11 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.example.mascon.Fragment.*
+import com.example.mascon.Topics.MakeTopics
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
@@ -41,8 +43,6 @@ class MainActivity : AppCompatActivity() {
         val notificationFragment = NotificationFragment()
         val profileFragment = ProfileFragment()
 
-
-
         makeCurrentFragment(homeFragment, R.id.home)
         bottomNavigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
@@ -57,6 +57,13 @@ class MainActivity : AppCompatActivity() {
                     }
                     bottomSheetDialog.setContentView(bottomSheetView)
                     bottomSheetDialog.show()
+
+                    bottomSheetView.findViewById<TextView>(R.id.tvMakeTopic).setOnClickListener {
+                        startActivity(Intent(this, MakeTopics::class.java))
+                    }
+
+
+                    bottomSheetView.findViewById<TextView>(R.id.tvMakePodcast)
 
 //                    if (saveIcon==R.id.home){
 //                        makeCurrentFragment(homeFragment, saveIcon)
