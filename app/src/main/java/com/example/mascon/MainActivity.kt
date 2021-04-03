@@ -3,10 +3,7 @@ package com.example.mascon
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.view.get
@@ -70,6 +67,7 @@ class MainActivity : AppCompatActivity() {
 
 
                     bottomSheetView.findViewById<TextView>(R.id.tvMakePodcast)
+
 
 //                    if (saveIcon==R.id.home){
 //                        makeCurrentFragment(homeFragment, saveIcon)
