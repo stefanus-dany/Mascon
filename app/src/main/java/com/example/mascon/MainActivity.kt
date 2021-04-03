@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.example.mascon.Fragment.*
+import com.example.mascon.Podcast.MakePodcast
 import com.example.mascon.Topics.MakeTopics
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var logout: Button
+    private lateinit var pindah: Button
     private lateinit var bottomNavigation : BottomNavigationView
     var saveIcon : Int = 0
 
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         auth = FirebaseAuth.getInstance()
+        pindah = findViewById(R.id.pindah)
+        pindah.setOnClickListener {
+            startActivity(Intent(this, MakePodcast::class.java))
+        }
         logout = findViewById(R.id.btnLogout)
         logout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
