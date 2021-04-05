@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.example.mascon.Fragment.*
+import com.example.mascon.Podcast.FragmentMakePodcast.SetPodcastNow
 import com.example.mascon.Podcast.MakePodcast
 import com.example.mascon.Topics.MakeTopics
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        SetPodcastNow.nameOfTopicText = null
         auth = FirebaseAuth.getInstance()
         pindah = findViewById(R.id.pindah)
         pindah.setOnClickListener {
