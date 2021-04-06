@@ -67,8 +67,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this, MakeTopics::class.java))
                     }
 
+                    bottomSheetView.findViewById<TextView>(R.id.tvMakePodcast).setOnClickListener {
+                        startActivity(Intent(this, MakePodcast::class.java))
+                    }
 
-                    bottomSheetView.findViewById<TextView>(R.id.tvMakePodcast)
 
 
 //                    if (saveIcon==R.id.home){
