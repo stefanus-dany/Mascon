@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mascon"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -50,6 +50,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
     implementation 'kr.co.prnd:readmore-textview:1.0.0'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.+') { transitive = true }
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

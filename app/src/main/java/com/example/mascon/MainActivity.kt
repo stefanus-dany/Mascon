@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.search -> makeCurrentFragment(searchFragment, R.id.search)
                 R.id.addBox ->{
                     val bottomSheetDialog = BottomSheetDialog(this, R.style.Theme_Design_BottomSheetDialog)
-                    var bottomSheetView : View = LayoutInflater.from(this).inflate(R.layout.fragment_add, findViewById(R.id.fragmentAddID))
+                    val bottomSheetView : View = LayoutInflater.from(this).inflate(R.layout.fragment_add, findViewById(R.id.fragmentAddID))
                     if (this!=null){
                         val parentViewGroup = parent as ViewGroup?
                         parentViewGroup?.removeAllViews();
