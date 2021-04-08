@@ -97,6 +97,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().apply {
             saveIcon = item
             replace(R.id.fl_wrapper, fragment)
+            addToBackStack(null)
             commit()
         }
     }
