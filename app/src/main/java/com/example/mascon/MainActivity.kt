@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         SetPodcastNow.nameOfTopicText = null
         auth = FirebaseAuth.getInstance()
         pindah = findViewById(R.id.pindah)
@@ -97,7 +96,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().apply {
             saveIcon = item
             replace(R.id.fl_wrapper, fragment)
-            addToBackStack(null)
             commit()
         }
     }
