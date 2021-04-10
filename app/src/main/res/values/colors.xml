@@ -13,6 +13,7 @@
     <color name="grayLight">#C4C4C4</color>
     <color name="sampulDefault">#9ED6FF</color>
     <color name="red">#d11a2a</color>
+    <color name="gray">#676565</color>
     <color name="warnaUnjoin">#4C4C51</color>
 
 </resources>
