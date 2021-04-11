@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import android.widget.TextView
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.example.mascon.Fragment.*
 import com.example.mascon.Podcast.FragmentMakePodcast.SetPodcastNow
@@ -19,8 +17,6 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var logout: Button
-    private lateinit var pindah: Button
     private lateinit var bottomNavigation : BottomNavigationView
     var saveIcon : Int = 0
 
@@ -29,16 +25,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         SetPodcastNow.nameOfTopicText = null
         auth = FirebaseAuth.getInstance()
-        pindah = findViewById(R.id.pindah)
-        pindah.setOnClickListener {
-            startActivity(Intent(this, MakePodcast::class.java))
-        }
-        logout = findViewById(R.id.btnLogout)
-        logout.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            startActivity(Intent(this, Login::class.java))
-            finish()
-        }
 
         bottomNavigation = findViewById(R.id.bottom_navigation)
         val homeFragment = HomeFragment()

@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mascon"
         tools:ignore="ExtraText">
-        <activity android:name=".Topics.LivePodcast.LivePodcast"></activity>
+        <activity android:name=".MainActivity" ></activity>
+        <activity android:name="com.example.mascon.Podcast.LivePodcast.LivePodcast" />
         <activity android:name=".Podcast.MakePodcast" />
         <activity android:name=".Topics.MenuTopic" />
         <activity android:name=".Topics.MakeTopics" />
@@ -24,7 +25,8 @@
         <activity android:name=".Login" /> <!-- untuk imagecrop -->
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.SplashScreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
