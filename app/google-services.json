@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "122392832644",
+    "project_id": "mascon-2744b",
+    "storage_bucket": "mascon-2744b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122392832644:android:3ed2e7e2557e7dd174b0d1",
+        "android_client_info": {
+          "package_name": "com.example.mascon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122392832644-81r0adbls0grkmikathidr2vmgrg6cok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkEV4BFk54XwerAB4xiVgGgTYJ666QFBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122392832644-81r0adbls0grkmikathidr2vmgrg6cok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
