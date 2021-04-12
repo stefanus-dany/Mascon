@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutListIfTopic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:paddingVertical="10dp"
+        android:id="@+id/topicName"
+        android:textSize="16sp"
+        android:paddingStart="10dp"
+        style="@style/ThemeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic Name" />
+
+</LinearLayout>

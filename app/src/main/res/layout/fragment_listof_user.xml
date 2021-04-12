@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Podcast.FragmentMakePodcast.ListofUser">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barListofUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:windowBackground">
+
+        <Toolbar
+            android:id="@+id/toolbarListOfUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:windowBackground">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="10dp"
+                android:id="@+id/search_bar_listOfUser"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawablePadding="5dp"
+                android:layout_marginHorizontal="17dp"
+                android:background="@drawable/search"
+                android:hint="Search..."/>
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_listOfUser"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/barListofUser"/>
+
+    <Button
+        android:id="@+id/btnDoneListOfUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_below="@+id/recycler_view_listOfUser"/>
+
+</RelativeLayout>

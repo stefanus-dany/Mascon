@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/xml_set_podcast_now"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Podcast.FragmentMakePodcast.SetPodcastNow">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:paddingBottom="80dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/topicsSetPodcastNow"
+                style="@style/ThemeText.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:gravity="center_vertical"
+                android:text="Topics"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/nameOfTopic"
+                style="@style/ThemeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                tools:text="Name of Topics" />
+
+            <TextView
+                style="@style/ThemeText.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="Podcast Title"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/podcastTitle"
+                style="@style/ThemeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/ThemeText.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="Podcast Description"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/podcastDescription"
+                style="@style/ThemeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvAddImage"
+                style="@style/ThemeText.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:gravity="center_vertical"
+                android:text="Add Image"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ivAddImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tvRemoveImage"
+                style="@style/ThemeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:textStyle="italic"
+                android:visibility="gone"
+                android:textColor="#0036FF"
+                android:text="Remove Image"
+                android:textSize="13sp" />
+
+            <TextView
+                style="@style/ThemeText.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="Invite"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/btnInvite"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/ic_baseline_person_add_24" />
+
+            <Button
+                android:id="@+id/btnCreatePodcastNow"
+                style="@style/ThemeText.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button"
+                android:text="Create Podcast"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
