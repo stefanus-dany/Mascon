@@ -123,6 +123,7 @@ class MenuTopic : AppCompatActivity() {
                     podcastAdapter.notifyDataSetChanged()
 
                     if (firebaseUser.uid == value?.ownerTopic) {
+                        btnJoin.visibility = View.INVISIBLE
                         addPodcast.visibility = View.VISIBLE
                         btnJoin.text = "Delete Topic"
                         btnJoin.backgroundTintList =
@@ -149,7 +150,8 @@ class MenuTopic : AppCompatActivity() {
 
         btnJoin.setOnClickListener {
             if (hakAkses == "owner") {
-                deleteTopic()
+//                deleteTopic()
+
             } else {
                 if ((btnJoin.text.toString() == "Join")) {
                     FirebaseDatabase.getInstance().reference.child("Topics")

@@ -120,38 +120,42 @@ class LivePodcast : AppCompatActivity(), JitsiMeetActivityInterface {
         }
 
         sendChat.setOnClickListener {
-            //random for LiveChat
-            val firebaseUser = FirebaseAuth.getInstance().currentUser
-            val alphabet: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
-            val idRandom = List(20) { alphabet.random() }.joinToString("")
-            //read time
-            val tgl = Date()
-            val simpDate = SimpleDateFormat("kk:mm:ss")
-            val timeOnly = simpDate.format(tgl)
+            if (chatContent.text.toString() != "") {
 
-            var email = ""
-            var nama = ""
+                //random for LiveChat
+                val firebaseUser = FirebaseAuth.getInstance().currentUser
+                val alphabet: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
+                val idRandom = List(20) { alphabet.random() }.joinToString("")
+                //read time
+                val tgl = Date()
+                val simpDate = SimpleDateFormat("kk:mm:ss")
+                val timeOnly = simpDate.format(tgl)
 
-            FirebaseDatabase.getInstance().reference.child("Users")
-                .child(firebaseUser.uid).child("fullname").get().addOnSuccessListener {
-                    nama = it.value.toString()
+                var email = ""
+                var nama = ""
 
-                    FirebaseDatabase.getInstance().reference.child("Users")
-                        .child(firebaseUser.uid).child("email").get().addOnSuccessListener {
-                            email = it.value.toString()
-                            val hashmap = HashMap<String, String>()
-                            hashmap.put("email", email)
-                            hashmap.put("name", nama)
-                            hashmap.put("chat", chatContent.text.toString())
-                            hashmap.put("timeOnly", timeOnly)
-                            val refChat = FirebaseDatabase.getInstance().reference.child("LiveNow")
-                                .child(ownerTopic!!)
-                                .child("liveChat")
-                                .child(idRandom)
-                            refChat.setValue(hashmap)
-                            chatContent.setText("")
-                        }
-                }
+                FirebaseDatabase.getInstance().reference.child("Users")
+                    .child(firebaseUser.uid).child("fullname").get().addOnSuccessListener {
+                        nama = it.value.toString()
+
+                        FirebaseDatabase.getInstance().reference.child("Users")
+                            .child(firebaseUser.uid).child("email").get().addOnSuccessListener {
+                                email = it.value.toString()
+                                val hashmap = HashMap<String, String>()
+                                hashmap.put("email", email)
+                                hashmap.put("name", nama)
+                                hashmap.put("chat", chatContent.text.toString())
+                                hashmap.put("timeOnly", timeOnly)
+                                val refChat =
+                                    FirebaseDatabase.getInstance().reference.child("LiveNow")
+                                        .child(ownerTopic!!)
+                                        .child("liveChat")
+                                        .child(idRandom)
+                                refChat.setValue(hashmap)
+                                chatContent.setText("")
+                            }
+                    }
+            }
         }
 
         btnListen.setOnClickListener {
